@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palindrome checker</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #db05e2, #ffffff);
+      transition: background 0.5s ease;
+    }
+
+    nav {
+      background-color: #222;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    main 
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    button {
+      
+      padding: 0.5rem 1.3rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: rgb(27, 169, 235);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    button#green {
+      background: rgb(26, 190, 48);
+    }
+
+    button#red {
+      background: orangered;
+    }
+
+    button#random {
+      background: linear-gradient(45deg, #607d8b, #90a4ae);
+    }
+    button#blue {
+      background: rgb(0, 162, 255);
+    }
+
+    .about {
+      margin-top: 2rem;
+      max-width: 600px;
+      font-size: 1rem;
+      color: #000000;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      position: fixed;
+      position: absolute;
+      bottom: 0%;
+      width: 100vw;
+    }
+    form input{
+        padding: 7px 4px;
+        border-radius: 5px;
+        border: none;
+        width: 40vw;
+        background-color: #9afffa;
+        
+        
+    }
+    .box{
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 20px;
+        border-radius: 9px;
+        background-color: #d6d4d4;
+        height: 30vh;
+        border: none;
+        box-shadow: 7px 4px 10px 2px;
+
+    }
+    
+    form label{
+        font-weight: 700;
+        color: #2e2a2a;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h3 {
+        font-size: 1.5rem;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Palindrome Cheacker</h1>
+  </nav>
+
+  
+
+  <footer>
+    &copy; 2025 Abdul's Projects. All rights reserved.
+  </footer>
+
+
+
+  <main>
+    <form action="">
+      <div class="box">
+          <label for="palindrome" >Enter the text </label>
+        <input type="text" name="palindrome" placeholder="enter the string" id="string" >
+        <button class="enter" onclick='check()'>Enter</button>
+      </div>
+    </form>
+  </main>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
